@@ -2,7 +2,7 @@
 <script>
 var api = 'https://api.github.com/repos/rpgexam/pdf/git/refs/heads/main';
 fetch(api).then(r => r.json()).then((o) => {
-$("#result").load("https://cdn.jsdelivr.net/gh/rpgexam/pdf@"+o.object.sha+"/result.html"); 
+$("#result").load("https://cdn.jsdelivr.net/gh/rpgexam/pdf@"+o.object.sha+"/resultinfo.html"); 
 
 })
 </script>
