@@ -1,0 +1,12 @@
+<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport' />
+<title>WBPSC Result</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+var api = 'https://api.github.com/repos/rpgexam/pdf/git/refs/heads/main';
+fetch(api).then(r => r.json()).then((o) => {
+$("#result").load("https://cdn.statically.io/gh/rpgexam/pdf/"+o.object.sha+"/resultinfo.html"); 
+
+})
+</script>
+
+<div id='result'></div>
